@@ -1,4 +1,5 @@
 export default {
+  renderers: ['@astrojs/renderer-react'],
   // projectRoot: '.',     // Where to resolve all URLs relative to. Useful if you have a monorepo project.
   // pages: './src/pages',   // Path to Astro components, pages, and data
   // dist: './dist',       // When running `astro build`, path to final static output
@@ -11,4 +12,5 @@ export default {
     // port: 3000,         // The port to run the dev server on.
     // tailwindConfig: '', // Path to tailwind.config.js if used, e.g. './tailwind.config.js'
   },
+
 };
