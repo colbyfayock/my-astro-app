@@ -1,6 +1,9 @@
 ---
 import Tour from '../components/Tour.astro';
 import Button from '../components/Button.jsx';
+import Characters from '../components/Characters.jsx';
+
+const characters = await fetch('https://finalspaceapi.com/api/v0/character?limit=5').then((res) => res.json());
 ---
 
 <!doctype html>
@@ -35,6 +38,8 @@ import Button from '../components/Button.jsx';
                 </p>
             </div>
         </header>
+
+        <Characters characters={characters} />
 
         <Tour />
     </main>
