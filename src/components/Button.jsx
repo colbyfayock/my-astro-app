@@ -1,8 +1,11 @@
 import React from 'react';
 
 const Button = ({ children }) => {
+  function handleOnClick() {
+    alert('Hello, Astro!');
+  }
   return (
-    <button>{ children }</button>
+    <button onClick={handleOnClick}>{ children }</button>
   )
 }
 
