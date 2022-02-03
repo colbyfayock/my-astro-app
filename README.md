@@ -1,6 +1,6 @@
 # Building a React App with Astro
 
-Demo for tutorial [How to Use Astro to Build React Apps without JavaScript](https://spacejelly.dev/posts/how-to-use-astro-to-build-react-apps-without-javascript/)
+Demo for tutorial [How to Use Astro to Build React Apps without JavaScript](https://www.youtube.com/watch?v=-5UPq7Lv9Sc)
 
 📝 Article: https://spacejelly.dev/posts/how-to-use-astro-to-build-react-apps-without-javascript/
 
