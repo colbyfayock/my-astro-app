@@ -2,6 +2,8 @@
 
 Demo for tutorial [How to Use Astro to Build React Apps without JavaScript](https://www.youtube.com/watch?v=-5UPq7Lv9Sc)
 
+🚀 See Demo: https://my-astro-app.netlify.app/
+
 📝 Article: https://spacejelly.dev/posts/how-to-use-astro-to-build-react-apps-without-javascript/
 
 📺 YouTube: https://www.youtube.com/watch?v=-5UPq7Lv9Sc
