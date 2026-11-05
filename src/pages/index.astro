@@ -3,7 +3,21 @@ import Tour from '../components/Tour.astro';
 import Button from '../components/Button.jsx';
 import Characters from '../components/Characters.jsx';
 
-const characters = await fetch('https://finalspaceapi.com/api/v0/character?limit=5').then((res) => res.json());
+const fallbackCharacters = [
+    { id: 1, name: 'Gary Goodspeed', img_url: 'https://finalspaceapi.com/api/character/avatar/gary_goodspeed.png' },
+    { id: 2, name: 'Mooncake', img_url: 'https://finalspaceapi.com/api/character/avatar/mooncake.jpg' },
+    { id: 3, name: 'Quinn Ergon', img_url: 'https://finalspaceapi.com/api/character/avatar/quinn_ergon.jpg' },
+    { id: 4, name: 'Little Cato', img_url: 'https://finalspaceapi.com/api/character/avatar/little_cato.jpg' },
+    { id: 5, name: 'Avocato', img_url: 'https://finalspaceapi.com/api/character/avatar/avocato.jpg' },
+];
+
+const characters = await fetch('https://finalspaceapi.com/api/v0/character?limit=5')
+    .then(async (response) => {
+        if (!response.ok) return fallbackCharacters;
+        const data = await response.json();
+        return Array.isArray(data) ? data : fallbackCharacters;
+    })
+    .catch(() => fallbackCharacters);
 ---
 
 <!doctype html>
@@ -34,7 +48,7 @@ const characters = await fetch('https://finalspaceapi.com/api/v0/character?limit
                 <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
                 <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
                 <p>
-                    <Button:load>Hello, Astro!</Button:load>
+                    <Button client:load>Hello, Astro!</Button>
                 </p>
             </div>
         </header>
