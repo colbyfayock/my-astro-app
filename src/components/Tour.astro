@@ -1,5 +1,4 @@
 ---
-import { Markdown } from 'astro/components';
 ---
 <article>
     <div class="banner">
@@ -7,31 +6,21 @@ import { Markdown } from 'astro/components';
     </div>
 
     <section>
-        <Markdown>
-            ## 🚀 Project Structure
-
-            Inside of your Astro project, you'll see the following folders and files:
-
-            ```
-            /
-            ├── public/
-            │   ├── robots.txt
-            │   └── favicon.ico
-            ├── src/
-            │   ├── components/
-            │   │   └── Tour.astro
-            │   └── pages/
-            │       └── index.astro
-            └── package.json
-            ```
-
-            Astro looks for `.astro` or `.md` files in the `src/pages/` directory.
-            Each page is exposed as a route based on its file name.
-
-            There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-            Any static assets, like images, can be placed in the `public/` directory.
-        </Markdown>
+        <h2>🚀 Project Structure</h2>
+        <p>Inside of your Astro project, you'll see the following folders and files:</p>
+        <pre><code class="tree">/
+├── public/
+│   ├── robots.txt
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   └── Tour.astro
+│   └── pages/
+│       └── index.astro
+└── package.json</code></pre>
+        <p>Astro looks for <code>.astro</code> or <code>.md</code> files in the <code>src/pages/</code> directory. Each page is exposed as a route based on its file name.</p>
+        <p>There's nothing special about <code>src/components/</code>, but that's where we like to put any component files.</p>
+        <p>Any static assets, like images, can be placed in the <code>public/</code> directory.</p>
     </section>
 
      <section>
